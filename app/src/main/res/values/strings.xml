@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">foodieapp</string>
+    <string name="find_your_snack">Find Your Snack!</string>
+    <string name="todo">TODO</string>
+    <string name="dotp">TODO</string>
+    <string name="hello_kimz">Hello Kimz!</string>
+    <string name="order_and_enjoy">Order and enjoy</string>
 </resources>
