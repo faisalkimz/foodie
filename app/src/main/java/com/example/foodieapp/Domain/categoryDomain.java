@@ -25,7 +25,8 @@ public class categoryDomain {
         this.pic = pic;
     }
 
-    public char getTitle() {
-        return 0;
+    public String getTitle() {
+
+        return name;
     }
 }

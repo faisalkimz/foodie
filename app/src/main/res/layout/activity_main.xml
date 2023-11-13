@@ -117,11 +117,11 @@
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="190dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="150dp"
+                        android:layout_marginTop="13dp"
                         android:text="Free Delivery!"
                         android:textColor="#000000"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -129,9 +129,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/textView"
-                        android:layout_marginStart="190dp"
-                        android:layout_marginTop="8dp"
-                        android:text="Very fast deliveries. "
+                        android:layout_marginStart="150dp"
+                        android:layout_marginTop="3dp"
+                        android:text="Cool deliveries! "
                         android:textColor="#000000"
                         android:textSize="17sp" />
 
@@ -139,8 +139,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/hello"
-                        android:layout_marginLeft="210dp"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="180dp"
+                        android:layout_marginTop="15dp"
                         android:layout_marginBottom="20dp"
                         android:background="@drawable/orange_background">
 
@@ -164,7 +164,7 @@
                 </RelativeLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_below="@+id/kim">
 
@@ -174,16 +174,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="32dp"
                         android:text="Categories"
+                        android:layout_marginTop="40dp"
                         android:textColor="#000000"
-                        android:textSize="18sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
                         tools:ignore="MissingConstraints" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerView"
-                        android:layout_width="140dp"
-                        android:layout_height="190dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="105dp"
                         android:layout_below="@+id/Edith"
                         android:layout_marginTop="24dp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -195,7 +196,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/recyclerView"
                         android:layout_marginStart="32dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="0dp"
                         android:text="Popular"
                         android:textColor="#000000"
                         android:textStyle="bold"
@@ -205,11 +206,11 @@
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recy"
-                        android:layout_width="140dp"
+                        android:layout_width="match_parent"
                         android:layout_height="190dp"
                         tools:ignore="MissingConstraints"
-                        tools:layout_editor_absoluteX="0dp"
-                        tools:layout_editor_absoluteY="257dp" />
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="183dp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -225,10 +226,11 @@
         android:layout_height="match_parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
+
         <com.google.android.material.bottomappbar.BottomAppBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/bottomnav"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
             android:layout_gravity="bottom"
             app:backgroundTint="#f6f6f6"
             app:fabCradleMargin="8dp"
@@ -236,17 +238,17 @@
             app:fabCradleVerticalOffset="6dp">
 
             <LinearLayout
-                android:layout_gravity="bottom"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom">
 
                 <LinearLayout
-                    android:paddingRight="30dp"
                     android:id="@+id/Homebutton"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
                     android:orientation="vertical"
+                    android:paddingRight="30dp"
                     android:paddingBottom="10dp"
                     tools:ignore="Suspicious0dp">
 
@@ -267,14 +269,14 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:paddingRight="30dp"
                     android:id="@+id/Accountbutton"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
                     android:orientation="vertical"
-                    tools:ignore="Suspicious0dp"
-                    android:paddingBottom="10dp">
+                    android:paddingRight="30dp"
+                    android:paddingBottom="10dp"
+                    tools:ignore="Suspicious0dp">
 
                     <ImageView
                         android:id="@+id/imageView5"
@@ -294,12 +296,12 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:paddingLeft="30dp"
                     android:id="@+id/contacbutton"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
                     android:orientation="vertical"
+                    android:paddingLeft="30dp"
                     tools:ignore="Suspicious0dp">
 
                     <ImageView
@@ -313,19 +315,19 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="ContactUs"
                         android:paddingBottom="5dp"
+                        android:text="ContactUs"
                         android:textAlignment="center" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:paddingLeft="30dp"
                     android:id="@+id/setbutton"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.2"
                     android:orientation="vertical"
+                    android:paddingLeft="30dp"
                     tools:ignore="Suspicious0dp">
 
                     <ImageView
@@ -339,8 +341,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Settings"
                         android:paddingBottom="5dp"
+                        android:text="Settings"
                         android:textAlignment="center" />
 
                 </LinearLayout>

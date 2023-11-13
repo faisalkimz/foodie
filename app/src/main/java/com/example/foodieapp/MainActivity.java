@@ -3,6 +3,8 @@ package com.example.foodieapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.foodieapp.Adaptor.categoryAdoptor;
 import com.example.foodieapp.Domain.categoryDomain;
 
 import android.os.Bundle;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
         recyclerViewCategory();
 
@@ -34,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         category.add(new categoryDomain("Hot Dog", "cat_3"));
         category.add(new categoryDomain("soda", "cat_4"));
         category.add(new categoryDomain("Doughnuts", "cat_5"));
+        adapter= new categoryAdoptor(category);
+        recyclerViewCategoryList.setAdapter(adapter);
 
 
     }
