@@ -10,7 +10,6 @@
         android:id="@+id/faisal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.08"
@@ -166,16 +165,16 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@+id/kim">
+                    android:layout_below="@+id/kim"
+                    android:layout_marginTop="10dp">
 
                     <TextView
                         android:id="@+id/Edith"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="32dp"
-                        android:text="Categories"
                         android:layout_marginTop="30dp"
+                        android:text="Categories"
                         android:textColor="#000000"
                         android:textSize="20sp"
                         android:textStyle="bold"
@@ -197,7 +196,6 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/recyclerView"
                         android:layout_marginStart="32dp"
-                        android:layout_marginTop="10dp"
                         android:text="Popular"
                         android:textColor="#000000"
                         android:textSize="20sp"
@@ -210,12 +208,11 @@
                         android:id="@+id/recycle11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        tools:ignore="MissingConstraints"
+                        android:paddingStart="22dp"
+                        android:paddingEnd="22dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView10"
-                        tools:layout_editor_absoluteX="16dp"
-                        tools:layout_editor_absoluteY="183dp" />
+                        tools:ignore="MissingConstraints" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
