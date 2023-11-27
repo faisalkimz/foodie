@@ -1,5 +1,7 @@
 package com.example.foodieapp.Adaptor;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,14 +9,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.foodieapp.Domain.FoodDomain;
-import com.example.foodieapp.Domain.categoryDomain;
 import com.example.foodieapp.R;
+import com.example.foodieapp.ShowDetailActivity;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -33,7 +33,7 @@ public class PopularAdoptor extends RecyclerView.Adapter<PopularAdoptor.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         String title = String.valueOf(categoryFoods.get(position).getTitle());
         holder.title.setText(title != null ? title : "");
 
@@ -45,6 +45,15 @@ public class PopularAdoptor extends RecyclerView.Adapter<PopularAdoptor.ViewHold
         Glide.with(holder.itemView.getContext())
                 .load(drawableResourceId)
                 .into(holder.pic);
+
+        holder.addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.itemView.getContext(), ShowDetailActivity.class);
+                intent.putExtra("object", categoryFoods.get(position));
+                holder.itemView.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

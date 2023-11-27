@@ -488,7 +488,8 @@ public class TinyDB {
     	putString(key, gson.toJson(obj));
     }
 
-    public void putListObject(String key, ArrayList<FoodDomain> playerList){
+    public void putListObject(String key, ArrayList<FoodDomain> listFood, ArrayList<FoodDomain> playerList){
+
         checkForNullKey(key);
         Gson gson = new Gson();
         ArrayList<String> objStrings = new ArrayList<String>();
@@ -588,5 +589,8 @@ public class TinyDB {
         if (value == null){
             throw new NullPointerException();
         }
+    }
+
+    public void putListObject(String cartList, ArrayList<FoodDomain> listFood) {
     }
 }
